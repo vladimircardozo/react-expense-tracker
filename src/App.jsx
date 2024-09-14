@@ -2,7 +2,9 @@ import React from "react"
 import { GlobalProvider } from "./contexts/GlobalState"
 import Header from "./components/Header"
 import Balance from "./components/Balance"
-import TransactionForm from "./components/TransactionForm"
+import TransactionForm from "./components/transactions/TransactionForm"
+import TransactionList from "./components/transactions/TransactionList"
+import IncomeExpenses from "./components/IncomeExpenses"
 
 function App() {
 
@@ -10,9 +12,10 @@ function App() {
     <>
       <GlobalProvider>
         <Header />
+        <IncomeExpenses/>
         <Balance />
         <TransactionForm />
-        <h1>Hello World</h1>
+        <TransactionList />
       </GlobalProvider>
     </>
   )
