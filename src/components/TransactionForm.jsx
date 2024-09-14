@@ -1,14 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
+import {useGlobalState} from "../contexts/GlobalState"
 
 function TransactionForm() {
-    return (
-       <div>
-        <form action="">
-            <input type="text" placeholder="Enter a Description" />
-            <input type="number" placeholder="Enter an Amount" />
-        </form>
-        </div>
-    )
+  const {addTransaction}  = useGlobalState()
+
+  const [description, setDescription] = useState();
+  const [amount, setAmount] = useState(0);
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    addTransaction({
+        id: 1,
+        description,
+        amount
+    });
+    console.log(description, amount)
+  }
+
+  return (
+    <div>
+      <form onSubmit={onSubmit}>
+        <input type="text" placeholder="Enter a Description" 
+        onChange={(e)  => setDescription(e.target.value)} />
+
+        <input type="number" step={0.01} placeholder="Enter an Amount" 
+        onChange={(e) => setAmount(e.target.value)} />
+        <button>Add Transaction</button>
+      </form>
+    </div>
+  );
 }
 
-export default TransactionForm
+export default TransactionForm;
