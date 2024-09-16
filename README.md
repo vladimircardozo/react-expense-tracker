@@ -1,8 +1,34 @@
-# React + Vite
+<h1>Expense Tracker</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción
+Esta es una aplicación web construida con React y Vite que visualiza datos interactivos utilizando VictoryPie para gráficos. El diseño de la interfaz de usuario se creó utilizando Tailwind CSS para garantizar un estilo moderno y responsivo.
 
-Currently, two official plugins are available:
+## Características
+- Visualización de datos con gráficos interactivos (VictoryPie)
+- Diseño responsivo con Tailwind CSS
+- Arquitectura optimizada con Vite para tiempos de carga rápidos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tecnologías Utilizadas
+- **React**: Librería de JavaScript para construir interfaces de usuario.
+- **Vite**: Herramienta de desarrollo rápida y optimizada.
+- **Tailwind CSS**: Framework de CSS utilitario para diseño responsivo.
+- **VictoryPie**: Librería de gráficos para visualización de datos.
+
+## Instalación
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/vladimircardozo/react-expense-tracker.git
+   ```
+
+2. Instala las dependencias:
+   ```bash
+   cd react-expense-tracker
+   npm install
+   ```
+
+3. Inicia la aplicación:
+   ```bash
+   npm run dev
+   ```
+
+4. Abre el navegador en `http://localhost:3000` para ver la aplicación en funcionamiento.
